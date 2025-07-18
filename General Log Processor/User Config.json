@@ -1,0 +1,47 @@
+{
+  "FOLDER_PATH": "./logs",
+  "OUTPUT_CSV": "./results/output.csv",
+  "RENAME_LOGS": false,
+  "NEW_EXT": ".txt",
+  "LOG_EXTENSIONS": [
+    ".log",
+    ".txt"
+  ],
+  "TIMESTAMP_FORMATS": [
+    "%Y/%m/%d %H:%M:%S.%f",
+    "%Y-%m-%d %H:%M:%S.%f",
+    "%d/%m/%Y %H:%M:%S.%f"
+  ],
+  "EVENT_SEQUENCE": [
+    "init",
+    "config",
+    "execute"
+  ],
+  "PATTERN_CONFIG": {
+    "init": {
+      "StepID": "StepID=([^,\\\\s]+)",
+      "Version": "Version=([^,\\\\s]+)"
+    },
+    "config": {
+      "ParamA": "ParamA=([^,\\\\s]+)",
+      "ParamB": "ParamB=([^,\\\\s]+)"
+    },
+    "execute": {
+      "MeasureX": "X=([^,\\\\s]+)",
+      "MeasureY": "Y=([^,\\\\s]+)"
+    }
+  },
+  "CSV_FIELDS": [
+    "SourceFiles",
+    "StartTime",
+    "StepID",
+    "Version",
+    "ParamA",
+    "ParamB",
+    "AvgMeasureX",
+    "AvgMeasureY",
+    "Duration(s)",
+    "frames"
+  ],
+  "LOG_LEVEL": "INFO"
+}
